@@ -1,6 +1,5 @@
 rm -f /ssd/los/out/.lock
 
 source build/envsetup.sh
-lunch carbon_devicename-userdebug
-
-make module -j12
+lunch havoc_jasmine-userdebug
+make android.hardware.power@1.1-service-qti -j12

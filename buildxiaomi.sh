@@ -1,18 +1,16 @@
-rm -f /ssd/cr-7.0/out/.lock
+
+export OUT_DIR_COMMON_BASE=/ssd/output
+rm -f /ssd/output/havoc/.lock
 
 source build/envsetup.sh
-lunch carbon_clover-userdebug
-make carbon -j12
+brunch havoc_clover-userdebug -j12
 
-rm -f /ssd/cr-7.0/out/.lock
-
-source build/envsetup.sh
-lunch carbon_wayne-userdebug
-make carbon -j12
-
-
-rm -f /ssd/cr-7.0/out/.lock
+rm -f /ssd/output/havoc/.lock
 
 source build/envsetup.sh
-lunch carbon_jasmine-userdebug
-make carbon -j12
+brunch havoc_wayne-userdebug -j12
+
+rm -f /ssd/output/havoc/.lock
+
+source build/envsetup.sh
+brunch havoc_jasmine-userdebug -j12
