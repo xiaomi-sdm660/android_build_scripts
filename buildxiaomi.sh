@@ -17,4 +17,4 @@ brunch  havoc_clover-userdebug
 rm -f /ssd/output/havoc/.lock
 
 source build/envsetup.sh
-brunch havoc_jasmine-userdebug
+brunch havoc_jasmine_sprout-userdebug
