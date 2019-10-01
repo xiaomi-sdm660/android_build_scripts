@@ -1,20 +1,18 @@
-
-export HAVOC_BUILD_TYPE=Official
+export CCACHE_EXEC=/usr/bin/ccache
+export PERL5LIB=/android/los/prebuilts/tools-lineage/linux-x86/lib/perl-base/
 export OUT_DIR_COMMON_BASE=/ssd/output
 
-
-
-rm -f /ssd/output/havoc/.lock
+rm -f /ssd/output/los/.lock
 
 source build/envsetup.sh
-brunch  havoc_wayne-userdebug
+brunch lineage_jasmine_sprout-userdebug
 
-rm -f /ssd/output/havoc/.lock
-
-source build/envsetup.sh
-brunch  havoc_clover-userdebug
-
-rm -f /ssd/output/havoc/.lock
+rm -f /ssd/output/los/.lock
 
 source build/envsetup.sh
-brunch havoc_jasmine_sprout-userdebug
+brunch  lineage_wayne-userdebug
+
+rm -f /ssd/output/los/.lock
+
+source build/envsetup.sh
+brunch  lineage_clover-userdebug
